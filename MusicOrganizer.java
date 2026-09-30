@@ -79,8 +79,32 @@ public class MusicOrganizer
             return false;
         }
 }
-//question 4
+//question 4 and 6
 public void listAllFiles(){
     //void because it dosent return anything. only prints all the files. it does not need parameters
+    for (String filename : files) {
+        System.out.println("filename");
+    }
 }
+//question 5. the number of println statements would depend on how many files are in the ArrayList
+//question 7
+public void listAllFiles2(){
+    int position = 0;
+    for(String filename : files){
+        System.out.println(position + ":" + filename);
+        position++;
+    }
+}
+public void listMatching(String searchString){
+    boolean found = false;
+    for(String filename: files) {
+        if(filename.contains(searchString)){ 
+            found = true;
+            System.out.println(filename);}
+        if (!found) {
+            System.out.println("no files matched");
+        }
+    }
+}
+
 }
